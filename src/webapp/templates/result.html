@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Данные Пользователя</title>
+</head>
+<body>
+    <h2>Информация о пользователе</h2>
+    <p>Имя: {{ user_data.first_name }}</p>
+    <p>Фамилия: {{ user_data.last_name }}</p>
+    <p>username: {{ user_data.username }}</p>
+    <p>До дня рождения осталось: {{ user_data.days_left }} дней, {{ user_data.hours_left }} часов, {{ user_data.minutes_left }} минут</p>
+<a href="https://t.me/share/url?url={{ share_link }}&text=Посмотри%20эти%20данные%20о%20пользователе!" target="_blank">Поделиться через Telegram</a>
+</body>
+</html>
