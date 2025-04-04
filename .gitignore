@@ -3,5 +3,8 @@ __pycache__/
 *.py[cod]
 
 # Игнорируем виртуальное окружение
-venv/
+.venv/
 .idea
+
+
+bot/config.py

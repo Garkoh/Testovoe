@@ -4,8 +4,8 @@ from fastapi import APIRouter, Request, Query
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 
-from src.bot.bot import bot
-from src.webapp.services import calculate_birthday_info
+# import bot
+from services import calculate_birthday_info
 
 
 webapp_router = APIRouter()
@@ -25,6 +25,6 @@ async def birthday(request: Request, birthdate: str = Query(...)):
     return templates.TemplateResponse("result.html", {"request": request, "user_data": user_data, "share_link": share_link})
 
 
-@webapp_router.on_event("shutdown")
-async def shutdown():
-    await bot.session.close()
+# @webapp_router.on_event("shutdown")
+# async def shutdown():
+#     await bot.session.close()

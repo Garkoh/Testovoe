@@ -1,0 +1,18 @@
+FROM python:3.12
+
+WORKDIR /webapp
+
+COPY webapp/requirements.txt .
+
+RUN pip install -r requirements.txt
+
+COPY webapp .
+
+RUN mkdir -p /cache
+
+COPY ./cache /webapp/cache
+
+
+RUN ls -la  # Проверит какие файлы скопировались
+
+CMD ["python", "main.py"]

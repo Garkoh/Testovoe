@@ -4,8 +4,8 @@ from aiogram import Router
 from aiogram.filters import CommandStart
 from aiogram.types import Message
 
-from src.bot.keyboards import settings
-from src.bot.cache.accessor import get_redis_connection, on_shutdown
+from keyboards import settings
+from cache.accessor import get_redis_connection, on_shutdown
 
 
 router = Router()

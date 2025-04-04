@@ -2,7 +2,7 @@ from datetime import datetime
 
 from fastapi import HTTPException
 
-from src.bot.cache.accessor import get_redis_data, on_shutdown, get_redis_connection
+from cache.accessor import get_redis_data, on_shutdown, get_redis_connection
 
 
 # Логика обработки данных для вычисления информации о дне рождения
